@@ -1,0 +1,289 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark .navbar {
+  background-color: #222;
+}
+
+body.dark .nav-links a {
+  color: #eee;
+}
+
+body.dark .review-card {
+  background: #1c1c1c;
+  color: #ddd;
+}
+
+body.dark .footer {
+  background: #222;
+  color: #aaa;
+}
+
+body.dark .footer-section h3,
+body.dark .footer-section h4 {
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #111;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.4s ease;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Dark Mode Button */
+.toggle-btn {
+  background: #ff4757;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #ff6b81;
+  transform: scale(1.05);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff4757;
+}
+
+/* Reviews Section */
+.reviews-section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  color: inherit;
+  animation: fadeInDown 1s ease;
+}
+
+.reviews-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Review Card */
+.review-card {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+}
+
+.review-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ff4757;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.reviewer-details h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.review-date {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+body.dark .review-date {
+  color: #aaa;
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #ffb400;
+  margin-right: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+.rating-text {
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Review Text */
+.review-text {
+  font-size: 0.95rem;
+  color: inherit;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 3rem 0 1rem;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer h3, 
+.footer h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-section ul a {
+  text-decoration: none;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul a:hover {
+  color: #ff4757;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}

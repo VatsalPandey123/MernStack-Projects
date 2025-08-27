@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineReviews - Movie Review Website</title>
+    <meta name="description" content="Discover and review the latest blockbuster movies with expert ratings and user reviews">
+    <link rel="stylesheet" href="movie-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>🎬 CineReviews</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2 class="section-title">Latest Reviews</h2>
+                <div class="reviews-grid">
+                    <article class="review-card">
+                        <div class="reviewer-info">
+                            <div class="avatar">JD</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">John Doe</h4>
+                                <span class="review-date">March 15, 2024</span>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">9.0</span>
+                        </div>
+                        <p class="review-text">"Absolutely phenomenal! The cinematography and storyline kept me on the edge of my seat throughout the entire movie. A true masterpiece that deserves all the praise it gets."</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="reviewer-info">
+                            <div class="avatar">SM</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Sarah Miller</h4>
+                                <span class="review-date">March 12, 2024</span>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">8.5</span>
+                        </div>
+                        <p class="review-text">"Great movie with excellent acting and visual effects. The plot could have been a bit tighter in the middle, but overall a very enjoyable experience that I'd recommend to anyone."</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="reviewer-info">
+                            <div class="avatar">MJ</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Mike Johnson</h4>
+                                <span class="review-date">March 10, 2024</span>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">9.5</span>
+                        </div>
+                        <p class="review-text">"This film exceeded all my expectations! The character development is outstanding, and every scene serves a purpose. Definitely one of the best movies I've seen this year."</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CineReviews</h3>
+                    <p>Your ultimate destination for movie reviews and ratings.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#movies">Movies</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CineReviews. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const body = document.querySelector("body");
+  const toggleBtn = document.createElement("button");
+  toggleBtn.innerText = "🌙 Dark Mode";
+  toggleBtn.classList.add("toggle-btn");
+
+  document.querySelector(".nav-container").appendChild(toggleBtn);
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    toggleBtn.innerText = body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+  });
+</script>
+</body>
+</html>
